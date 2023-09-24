@@ -18,7 +18,11 @@ const updater = (state, action) => {
 function App() {
   const [tasks, dispatchTasks] = useReducer(updater, []);
 
-
+  /* [{
+            id: useId(),
+            title: taskTitle
+        }]
+  */
 
   return (
     <>
