@@ -1,5 +1,7 @@
 import { useId } from 'react';
 import Button from '../../Button/Button';
+import { deleteTask } from '../../../app/slices/checklistSlice';
+
 
 function ChecklistItem({
     taskData, 
@@ -8,7 +10,7 @@ function ChecklistItem({
     const id = useId();
 
     const handleDeleteClick = ()=> {
-        dispatchDelete({type: 'deleteTask', payload: taskData.id})
+        dispatchDelete(deleteTask(taskData))
     }
 
     return (
