@@ -11,7 +11,7 @@ reducers: {
 
     deleteTask:(state, action) =>
     {
-        return state.filter(task => task.id !== action.payload.id)
+        return state.filter(task => task.id !== action.payload)
     }
 }
 })
